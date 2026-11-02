@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samrudha Sanil — Creative Designer & CS Student | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Samrudha Sanil — 4th-year B.Tech Computer Science and Design student at Vimal Jyothi Engineering College. UI/UX Designer, Illustrator, Poster Designer, and Web Creator.">
+
+  <!-- Phosphor Icons -->
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css"/>
+  <link rel="stylesheet" type="text/css" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/bold/style.css"/>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Custom Magnetic Cursor -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Ambient Subtle Interactive Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- ===================================================================
+       STICKY NAVIGATION BAR (Clean, editorial)
+       =================================================================== -->
+  <header class="navbar-wrapper">
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+      <a href="#home" class="nav-brand" aria-label="Samrudha Sanil Portfolio Home">
+        SAMRUDHA<span class="brand-dot">.</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#work" class="nav-link">Work</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Light / Dark Mode Toggle -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Toggle Light and Dark Mode" title="Toggle Theme">
+          <i class="ph ph-moon"></i>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobileNavToggle" class="nav-mobile-toggle" aria-label="Open mobile navigation menu">
+          <i class="ph ph-list"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileNavDrawer" class="mobile-nav-drawer" aria-label="Mobile Navigation Drawer">
+    <a href="#home" class="nav-link">Home</a>
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills</a>
+    <a href="#work" class="nav-link">Work</a>
+    <a href="#services" class="nav-link">Services</a>
+    <a href="#contact" class="nav-link">Contact</a>
+  </div>
+
+  <main>
+    <!-- ===================================================================
+         1. HERO / HOME SECTION (Matching reference screenshot)
+         =================================================================== -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Text -->
+          <div class="hero-content reveal-up">
+            <h1 class="hero-greeting">
+              Hi, I’m<br>
+              Samrudha Sanil<span class="dot">.</span>
+            </h1>
+
+            <div class="hero-roles-text">
+              UI/UX Designer • Illustrator<br>
+              Creative Designer • Web Creator
+            </div>
+
+            <!-- CTAs -->
+            <div class="hero-ctas">
+              <a href="#work" class="btn-explore">
+                <span>Explore My Work</span>
+                <span>↘</span>
+              </a>
+              <a href="#contact" class="btn-connect">
+                <span>Let’s Connect</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Hero Image: Capsule Arch Frame with Offset Rust Outline & CREATE Stamp -->
+          <div class="hero-profile-area reveal-up">
+            <div class="profile-capsule-wrapper">
+              
+              <!-- Offset Rust Outline Shadow -->
+              <div class="profile-arch-shadow" aria-hidden="true"></div>
+
+              <!-- Main Arch Frame -->
+              <div class="profile-arch-frame">
+  <img 
+    src="images/illustration/image.png" 
+    alt="Samrudha Sanil" 
+    class="profile-arch-img" 
+    onerror="this.src='./samrudha_profile_1790960914899.jpg';"
+  >
+</div>
+
+              <!-- Floating Round Yellow Stamp: CREATE -->
+              <div class="badge-create-stamp" aria-label="Create Badge">
+                <span>CREATE</span>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         TICKER / MARQUEE BANNER (Exact Rust Red Ribbon from Reference)
+         =================================================================== -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">POSTER DESIGN <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">FIGMA <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">CREATIVE WEB <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">UI/UX DESIGN <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">ILLUSTRATION <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">POSTER DESIGN <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">FIGMA <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">CREATIVE WEB <span class="ticker-star">✱</span></span>
+        <!-- Duplicated for smooth loop -->
+        <span class="ticker-item">POSTER DESIGN <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">FIGMA <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">CREATIVE WEB <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">UI/UX DESIGN <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">ILLUSTRATION <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">POSTER DESIGN <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">FIGMA <span class="ticker-star">✱</span></span>
+        <span class="ticker-item">CREATIVE WEB <span class="ticker-star">✱</span></span>
+      </div>
+    </div>
+
+    <!-- ===================================================================
+         2. ABOUT ME SECTION (Exact layout from user screenshot)
+         =================================================================== -->
+    <section id="about" class="about-section">
+      <div class="container">
+        
+        <div class="about-header-row reveal-up">
+          <div class="section-index-tag">
+            <span class="index-num">01</span>
+            <span class="index-line"></span>
+            <span>ABOUT</span>
+          </div>
+        </div>
+
+        <div class="about-grid-content">
+          
+          <!-- Left Column -->
+          <div class="about-left-col reveal-up">
+            <h2 class="about-lead-heading">
+              Creative<br>
+              <span class="italic-rust">by nature.</span>
+            </h2>
+          </div>
+
+          <!-- Right Column -->
+          <div class="about-right-col reveal-up">
+            <div class="about-intro-statement">
+              I’m a 4th-year B.Tech Computer Science and Design student at Vimal Jyothi Engineering College, graduating in 2027.
+            </div>
+
+            <div class="about-two-cols">
+              <div class="about-col-text">
+                I’m happiest creating images, illustrations, posters, and interfaces—using technology as a medium rather than the destination.
+              </div>
+              <div class="about-col-text">
+                I’m building toward a career where design, creative direction, and visual storytelling are more prominent than pure coding.
+              </div>
+            </div>
+
+            <!-- Tag Buttons Strip (Exact pills from reference) -->
+            <div class="about-tag-strip">
+              <span class="tag-btn outlined">DESIGN</span>
+              <span class="tag-btn filled-rust">ILLUSTRATION</span>
+              <span class="tag-btn outlined">UI/UX</span>
+              <span class="tag-btn filled-gold">WEB</span>
+              <span class="tag-btn outlined">CREATIVITY</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         3. SKILLS SECTION (Warm Paper Cards, Figma Spotlight)
+         =================================================================== -->
+    <section id="skills" class="skills-section">
+      <div class="container">
+        
+        <div class="section-index-tag reveal-up">
+          <span class="index-num">02</span>
+          <span class="index-line"></span>
+          <span>SKILLS & CRAFT</span>
+        </div>
+
+        <div class="section-header reveal-up">
+          <h2>Visual Craft Powered by Design</h2>
+          <p>
+            No arbitrary percentages or deceptive ratings. Here is my core practical visual design and creative toolset, with Figma taking center stage as my primary design system workbench.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          
+          <!-- Figma Mastery (Hero Card) -->
+          <div class="skill-paper-card reveal-up">
+            <div class="skill-card-top">
+              <div class="skill-icon-pill">
+                <i class="ph ph-figma-logo"></i>
+              </div>
+              <span class="skill-card-badge">Core Specialization</span>
+            </div>
+            <h3>Figma Mastery & Design Systems</h3>
+            <p>
+              My primary design laboratory. From rapid ideation and high-fidelity wireframing to responsive auto-layout, tokenized variable design systems, and developer handoff documentation.
+            </p>
+            <div class="skill-chips">
+              <span class="skill-chip">Auto-Layout 5.0</span>
+              <span class="skill-chip">Design Tokens</span>
+              <span class="skill-chip">Interactive Prototyping</span>
+              <span class="skill-chip">Design Handoff</span>
+            </div>
+          </div>
+
+          <!-- UI/UX Design -->
+          <div class="skill-paper-card reveal-up">
+            <div class="skill-card-top">
+              <div class="skill-icon-pill">
+                <i class="ph ph-layout"></i>
+              </div>
+              <span class="skill-card-badge">User Centered</span>
+            </div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Designing intuitive digital interfaces rooted in cognitive psychology, visual hierarchy, responsive multi-breakpoint layouts, and WCAG accessibility standards.
+            </p>
+            <div class="skill-chips">
+              <span class="skill-chip">User Journeys</span>
+              <span class="skill-chip">Information Arch</span>
+              <span class="skill-chip">Micro-interactions</span>
+              <span class="skill-chip">Accessibility (a11y)</span>
+            </div>
+          </div>
+
+          <!-- Illustration & Digital Art -->
+          <div class="skill-paper-card reveal-up">
+            <div class="skill-card-top">
+              <div class="skill-icon-pill">
+                <i class="ph ph-paint-brush-broad"></i>
+              </div>
+              <span class="skill-card-badge">Fine Art</span>
+            </div>
+            <h3>Digital Illustration</h3>
+            <p>
+              Expressive digital paintings, character concepts, whimsical fantasy art, and editorial graphics made with rich textures, celestial lighting, and vibrant color harmonies.
+            </p>
+            <div class="skill-chips">
+              <span class="skill-chip">Procreate</span>
+              <span class="skill-chip">Digital Painting</span>
+              <span class="skill-chip">Character Design</span>
+              <span class="skill-chip">Vector Art</span>
+            </div>
+          </div>
+
+          <!-- Poster Design -->
+          <div class="skill-paper-card reveal-up">
+            <div class="skill-card-top">
+              <div class="skill-icon-pill">
+                <i class="ph ph-newspaper-clipping"></i>
+              </div>
+              <span class="skill-card-badge">Print & Social</span>
+            </div>
+            <h3>Poster Design</h3>
+            <p>
+              High-impact typographic and illustrative posters for symposiums, cultural gatherings, indie festivals, and brand campaigns that command attention from across the room.
+            </p>
+            <div class="skill-chips">
+              <span class="skill-chip">Swiss Typography</span>
+              <span class="skill-chip">Editorial Grids</span>
+              <span class="skill-chip">Color Theory</span>
+              <span class="skill-chip">Print Ready (300 DPI)</span>
+            </div>
+          </div>
+
+          <!-- Website Creation -->
+          <div class="skill-paper-card reveal-up">
+            <div class="skill-card-top">
+              <div class="skill-icon-pill">
+                <i class="ph ph-code"></i>
+              </div>
+              <span class="skill-card-badge">Front-End</span>
+            </div>
+            <h3>Website Creation</h3>
+            <p>
+              Combining modern front-end technologies (HTML5, CSS3, JavaScript, React basics) with creative canvas interactions and motion design to turn prototypes into interactive web realities.
+            </p>
+            <div class="skill-chips">
+              <span class="skill-chip">HTML5 / CSS3</span>
+              <span class="skill-chip">JavaScript ES6+</span>
+              <span class="skill-chip">Responsive Layouts</span>
+              <span class="skill-chip">Canvas Motion</span>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         4. FEATURED PROJECTS SECTION (Work Gallery)
+         =================================================================== -->
+    <section id="work" class="projects-section">
+      <div class="container">
+        
+        <div class="section-index-tag reveal-up">
+          <span class="index-num">03</span>
+          <span class="index-line"></span>
+          <span>CURATED WORK</span>
+        </div>
+
+        <div class="section-header reveal-up">
+          <h2>Interactive Digital Art & Projects</h2>
+          <p>
+            Explore my story-based game learning platform, curated poster collections, and digital art exhibitions. Click on any work to view in high resolution.
+          </p>
+        </div>
+
+        <!-- Filter Bar -->
+        <div class="flagship-showcase-card work-filterable-item reveal-up" data-category="web">
+  <!-- Top Section: Text Content & Action Button -->
+  <div class="flagship-content-wrapper" style="margin-bottom: 24px;">
+    <span class="flagship-tag">Major Featured Project</span>
+    <h3 class="flagship-title">Princess Quest</h3>
+    <div class="flagship-subtitle">Educational Web Experience • Game-Based Python Learning</div>
+
+    <p class="flagship-desc" style="margin-bottom: 20px;">
+      Learning programming shouldn't feel like staring into a black terminal abyss. <strong>Princess Quest</strong> is an adventure-driven educational platform that transforms core Python programming concepts into whimsical fantasy quests. Students help a clever princess navigate mysterious enchanted forests, solve logic puzzles, and befriend dragons by writing and testing actual Python functions.
+    </p>
+
+    <!-- Primary Link / CTA Button -->
+    <div class="flagship-actions">
+      <a 
+        href="https://quest-save-the-princess.onrender.com" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        class="btn-live-demo"
+        style="display: inline-flex; align-items: center; gap: 8px; background-color: #d94e34; color: #ffffff; padding: 12px 22px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.95rem; transition: background-color 0.2s ease, transform 0.2s ease;"
+        onmouseenter="this.style.backgroundColor='#b83d26'; this.style.transform='translateY(-2px)';"
+        onmouseleave="this.style.backgroundColor='#d94e34'; this.style.transform='translateY(0)';"
+      >
+        <i class="ph ph-arrow-square-out" style="font-size: 1.1rem;"></i>
+        Launch Live Demo Game ↗
+      </a>
+    </div>
+  </div>
+
+ 
+      <img 
+  src="./Screenshot 2026-10-26 203018.png" 
+  alt="Princess Quest Game Interface Preview" 
+  style="width: 100%; height: auto; display: block; border-radius: 15px;"
+>
+  
+  </div>
+</div>
+         
+
+         
+
+        <!-- POSTER COLLECTION -->
+        
+<!-- POSTER COLLECTION -->
+<div class="gallery-section-divider work-filterable-item" data-category="posters">
+  <h3>Poster Gallery</h3>
+  <span class="count">My Poster Collection</span>
+</div>
+
+<div class="posters-grid">
+
+  <!-- ============================= -->
+  <!-- POSTER 1 -->
+  <!-- ============================= -->
+  <div 
+    class="poster-item-card work-filterable-item reveal-up"
+    data-category="posters"
+    data-lightbox="true"
+    data-img="YOUR_POSTER_PATH_1"
+    data-title="Poster 1"
+    data-category-label="Poster Design"
+    data-desc="Poster design created as part of my graphic design work."
+    data-meta="Poster Design"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="poster-img-container">
+      <img 
+        src="images/poster/TECHNO.png"
+        alt="Poster 1"
+      >
+    </div>
+
+    <div class="poster-info-bottom">
+      <span class="tag">Poster Design</span>
+      <h4>Poster 1</h4>
+      <p>Graphic Design</p>
+    </div>
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- POSTER 2 -->
+  <!-- ============================= -->
+  <div 
+    class="poster-item-card work-filterable-item reveal-up"
+    data-category="posters"
+    data-lightbox="true"
+    data-img="YOUR_POSTER_PATH_2"
+    data-title="Poster 2"
+    data-category-label="Poster Design"
+    data-desc="Poster design created as part of my graphic design work."
+    data-meta="Poster Design"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="poster-img-container">
+      <img 
+        src="images/poster/orange.jpg"
+        alt="Poster 2"
+      >
+    </div>
+
+    <div class="poster-info-bottom">
+      <span class="tag">Poster Design</span>
+      <h4>Poster 2</h4>
+      <p>Graphic Design</p>
+    </div>
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- POSTER 3 -->
+  <!-- ============================= -->
+  <div 
+    class="poster-item-card work-filterable-item reveal-up"
+    data-category="posters"
+    data-lightbox="true"
+    data-img="c:\Users\LOQ\Downloads\MUSIC.png"
+    data-title="Poster 3"
+    data-category-label="Poster Design"
+    data-desc="Poster design created as part of my graphic design work."
+    data-meta="Poster Design"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="poster-img-container">
+      <img 
+        src="images/poster/MUSIC.png"
+        alt="Poster 3"
+      >
+    </div>
+
+    <div class="poster-info-bottom">
+      <span class="tag">Poster Design</span>
+      <h4>Poster 3</h4>
+      <p>Graphic Design</p>
+    </div>
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- POSTER 4 -->
+  <!-- ============================= -->
+  <div 
+    class="poster-item-card work-filterable-item reveal-up"
+    data-category="posters"
+    data-lightbox="true"
+    data-img="YOUR_POSTER_PATH_4"
+    data-title="Poster 4"
+    data-category-label="Poster Design"
+    data-desc="Poster design created as part of my graphic design work."
+    data-meta="Poster Design"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="poster-img-container">
+      <img 
+        src="images/poster/Your paragraph text (2).png"
+        alt="Poster 4"
+      >
+    </div>
+
+    <div class="poster-info-bottom">
+      <span class="tag">Poster Design</span>
+      <h4>Poster 4</h4>
+      <p>Graphic Design</p>
+    </div>
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- POSTER 5 -->
+  <!-- ============================= -->
+  <div 
+    class="poster-item-card work-filterable-item reveal-up"
+    data-category="posters"
+    data-lightbox="true"
+    data-img="YOUR_POSTER_PATH_5"
+    data-title="Poster 5"
+    data-category-label="Poster Design"
+    data-desc="Poster design created as part of my graphic design work."
+    data-meta="Poster Design"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="poster-img-container">
+      <img 
+        src="images/poster/SIP SMILE REPEAT.png"
+        alt="Poster 5"
+      >
+    </div>
+
+    <div class="poster-info-bottom">
+      <span class="tag">Poster Design</span>
+      <h4>Poster 5</h4>
+      <p>Graphic Design</p>
+    </div>
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- POSTER 6 -->
+  <!-- ============================= -->
+  <div 
+    class="poster-item-card work-filterable-item reveal-up"
+    data-category="posters"
+    data-lightbox="true"
+    data-img="YOUR_POSTER_PATH_6"
+    data-title="Poster 6"
+    data-category-label="Poster Design"
+    data-desc="Poster design created as part of my graphic design work."
+    data-meta="Poster Design"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="poster-img-container">
+      <img 
+        src="images/poster/Your paragraph text (3).png"
+        alt="Poster 6"
+      >
+    </div>
+
+    <div class="poster-info-bottom">
+      <span class="tag">Poster Design</span>
+      <h4>Poster 6</h4>
+      <p>Graphic Design</p>
+    </div>
+  </div>
+
+</div>
+
+<!-- ILLUSTRATION GALLERY -->
+```
+
+
+        <!-- ILLUSTRATION GALLERY -->
+        <!-- ILLUSTRATION GALLERY -->
+<div class="gallery-section-divider work-filterable-item" data-category="illustrations">
+  <h3>Illustration Gallery</h3>
+  <span class="count">03 Illustrations</span>
+</div>
+
+<div class="illustrations-grid">
+
+  <!-- ============================= -->
+  <!-- ILLUSTRATION 1 -->
+  <!-- ============================= -->
+  <div
+    class="illus-item-card work-filterable-item reveal-up"
+    data-category="illustrations"
+    data-lightbox="true"
+    data-title="Illustration 1"
+    data-category-label="Digital Illustration"
+    data-desc="Digital illustration created as part of my creative work."
+    data-meta="Digital Artwork"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="illus-img-container">
+      <img
+        src="images/illustration/WhatsApp Image 2026-10-03 at 9.06.01 AM (1).jpeg"
+        alt="Illustration 1"
+        onload="this.closest('.illus-item-card').dataset.img=this.getAttribute('src')"
+      >
+    </div>
+
+    <div class="illus-info-bottom">
+      <h4>Illustration 1</h4>
+      <p>Digital Illustration • 2026</p>
+    </div>
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- ILLUSTRATION 2 -->
+  <!-- ============================= -->
+  <div
+    class="illus-item-card work-filterable-item reveal-up"
+    data-category="illustrations"
+    data-lightbox="true"
+    data-title="Illustration 2"
+    data-category-label="Digital Illustration"
+    data-desc="Digital illustration created as part of my creative work."
+    data-meta="Digital Artwork"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="illus-img-container">
+      <img
+        src="images/illustration/WhatsApp Image 2026-10-03 at 9.06.00 AM.jpeg"
+        alt="Illustration 2"
+        onload="this.closest('.illus-item-card').dataset.img=this.getAttribute('src')"
+      >
+    </div>
+
+    <div class="illus-info-bottom">
+      <h4>Illustration 2</h4>
+      <p>Digital Illustration • 2026</p>
+    </div>
+  </div>
+
+
+  <!-- ============================= -->
+  <!-- ILLUSTRATION 3 -->
+  <!-- ============================= -->
+  <div
+    class="illus-item-card work-filterable-item reveal-up"
+    data-category="illustrations"
+    data-lightbox="true"
+    data-title="Illustration 3"
+    data-category-label="Digital Illustration"
+    data-desc="Digital illustration created as part of my creative work."
+    data-meta="Digital Artwork"
+    data-tools="Adobe Illustrator"
+    data-year="2026"
+  >
+    <div class="illus-img-container">
+      <img
+        src="images/illustration/WhatsApp Image 2026-10-03 at 9.06.00 AM (2).jpeg"
+        alt="Illustration 3"
+        onload="this.closest('.illus-item-card').dataset.img=this.getAttribute('src')"
+      >
+    </div>
+
+    <div class="illus-info-bottom">
+      <h4>Illustration 3</h4>
+      <p>Digital Illustration • 2026</p>
+    </div>
+  </div>
+
+</div>
+    <!-- ===================================================================
+         5. SERVICES SECTION ("What I Can Create")
+         =================================================================== -->
+    <section id="services" class="services-section">
+      <div class="container">
+        
+        <div class="section-index-tag reveal-up">
+          <span class="index-num">04</span>
+          <span class="index-line"></span>
+          <span>CAPABILITIES</span>
+        </div>
+
+        <div class="section-header reveal-up">
+          <h2>What I Can Create</h2>
+          <p>
+            Whether you need an intuitive digital product interface, an attention-grabbing event poster, or bespoke custom illustrations, I turn vision into tangible creative output.
+          </p>
+        </div>
+
+        <div class="services-grid">
+          <!-- Service 1: UI/UX Design -->
+          <div class="service-paper-card reveal-up">
+            <div class="service-index">01</div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Designing clean, engaging, user-focused digital interfaces and experiences that reduce cognitive friction and delight users across all screen sizes.
+            </p>
+            <ul class="service-deliverables-list">
+              <li><i class="ph ph-check-circle-bold"></i> Figma design files & interactive prototypes</li>
+              <li><i class="ph ph-check-circle-bold"></i> User journeys & wireframing systems</li>
+              <li><i class="ph ph-check-circle-bold"></i> Reusable component libraries & tokens</li>
+              <li><i class="ph ph-check-circle-bold"></i> Developer handoff specifications</li>
+            </ul>
+            <a href="#contact" class="service-cta-link">
+              <span>Commission UI/UX Work</span>
+              <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 2: Poster Design -->
+          <div class="service-paper-card reveal-up">
+            <div class="service-index">02</div>
+            <h3>Poster Design</h3>
+            <p>
+              Creating visually engaging, high-impact posters for events, promotions, social media campaigns, and creative projects.
+            </p>
+            <ul class="service-deliverables-list">
+              <li><i class="ph ph-check-circle-bold"></i> 300 DPI print-ready CMYK files</li>
+              <li><i class="ph ph-check-circle-bold"></i> Social media adaptations (9:16 & 1:1)</li>
+              <li><i class="ph ph-check-circle-bold"></i> Expressive custom typography layouts</li>
+              <li><i class="ph ph-check-circle-bold"></i> Event branding & visual guidelines</li>
+            </ul>
+            <a href="#contact" class="service-cta-link">
+              <span>Commission Poster Design</span>
+              <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+
+          <!-- Service 3: Illustration -->
+          <div class="service-paper-card reveal-up">
+            <div class="service-index">03</div>
+            <h3>Illustration</h3>
+            <p>
+              Creating custom illustrations, character concepts, and visual artwork for digital and creative purposes.
+            </p>
+            <ul class="service-deliverables-list">
+              <li><i class="ph ph-check-circle-bold"></i> Custom digital paintings & concept art</li>
+              <li><i class="ph ph-check-circle-bold"></i> Scalable vector graphics & app icons</li>
+              <li><i class="ph ph-check-circle-bold"></i> Editorial visuals & storybook graphics</li>
+              <li><i class="ph ph-check-circle-bold"></i> Merchandising and cover designs</li>
+            </ul>
+            <a href="#contact" class="service-cta-link">
+              <span>Commission Custom Artwork</span>
+              <i class="ph ph-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         6. EXPERIENCE SECTION (i Geeks Technologies)
+         =================================================================== -->
+    <section class="experience-section">
+      <div class="container">
+        
+        <div class="section-index-tag reveal-up">
+          <span class="index-num">05</span>
+          <span class="index-line"></span>
+          <span>EXPERIENCE</span>
+        </div>
+
+        <div class="exp-box reveal-up">
+          <div class="exp-header-row">
+            <div>
+              <h3>Full Stack Development Intern</h3>
+              <div class="exp-company-tag">i Geeks Technologies</div>
+            </div>
+            <span class="exp-badge-duration">10-Day Intensive Internship</span>
+          </div>
+
+          <p class="exp-body-text">
+            Practical exposure to full-stack web development workflows, backend APIs, database schemas, and client-server rendering. While my primary identity is firmly grounded in <strong>UI/UX, illustration, and visual design</strong>, this engineering exposure gives me rare technical empathy. I know exactly how developers will interpret Figma tokens, layouts, and components, ensuring every design is both gorgeous and production-ready.
+          </p>
+
+          <div class="exp-chips-row">
+            <span class="exp-chip">Full-Stack Architecture</span>
+            <span class="exp-chip">Frontend & Backend Interfacing</span>
+            <span class="exp-chip">Developer Handoff Empathy</span>
+            <span class="exp-chip">REST APIs</span>
+          </div>
+        </div>
+
+      </div>
+    
+
+
+
+
+
+      <div class="container">
+        
+        <div class="section-index-tag reveal-up">
+        
+         
+          
+        </div>
+
+        <div class="exp-box reveal-up">
+          <div class="exp-header-row">
+            <div>
+              <h3>IBM SkillsBuild Intern</h3>
+              <div class="exp-company-tag">BharatCares & IBM SkillsBuild</div>
+            </div>
+            <span class="exp-badge-duration">6-Weeks Intensive Internship</span>
+          </div>
+
+          <p class="exp-body-text">
+            Gained comprehensive practical exposure to big data fundamentals, business management strategies, and analytical workflows. Enhanced data-driven decision-making capabilities and leveraged IBM SkillsBuild resources to understand modern enterprise operations, data processing concepts, and strategic business frameworks
+          </p>
+
+          <div class="exp-chips-row">
+            <span class="exp-chip">Big Data Business Management</span>
+            <span class="exp-chip">Data Analytics </span>
+            <span class="exp-chip">Enterprise Operations</span>
+            <span class="exp-chip">Strategic Frameworks</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ======
+
+
+
+
+    <!-- ===================================================================
+         7. PHILOSOPHY ("Where Code Meets Creativity")
+         =================================================================== -->
+    <section class="philosophy-section">
+      <div class="container">
+        
+        <div class="section-index-tag reveal-up">
+          <span class="index-num">06</span>
+          <span class="index-line"></span>
+          <span>THE CREATIVE PIPELINE</span>
+        </div>
+
+        <div class="section-header reveal-up">
+          <h2>Where Code Meets Creativity</h2>
+          <p>
+            Technology is my medium, but human expression is the goal. Here is how I transform abstract sparks into delightful interactive experiences.
+          </p>
+        </div>
+
+        <div class="pipeline-steps-row reveal-up">
+          <div class="step-card">
+            <div class="step-num-circle">1</div>
+            <h4>Idea</h4>
+            <p>Empathy, research, visual moodboarding, and creative storytelling sparks.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-circle">2</div>
+            <h4>Design</h4>
+            <p>Figma auto-layouts, color harmony, typography scale, and wireframing.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-circle">3</div>
+            <h4>Interaction</h4>
+            <p>Micro-animations, responsive feedback, accessibility checks, and playful motion.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-num-circle">4</div>
+            <h4>Experience</h4>
+            <p>A memorable, cohesive digital art piece or product that people love to use.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         8. CONTACT SECTION
+         =================================================================== -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        
+        <div class="contact-card-box reveal-up">
+          
+          <!-- Left: Information & Quick Links -->
+          <div class="contact-left">
+            <div class="section-index-tag">
+              <span class="index-num">07</span>
+              <span class="index-line"></span>
+              <span>GET IN TOUCH</span>
+            </div>
+
+            <h2>
+              Have an idea?<br>
+              <span class="text-rust">Let’s create something.</span>
+            </h2>
+
+            <p>
+              Open for design internships, UI/UX collaborations, poster commissions, and creative web projects. Reach out directly or send a message below.
+            </p>
+
+            <div class="contact-methods-stack">
+              <!-- Email -->
+              <a href="mailto:samrudhasanil.design@gmail.com" class="contact-pill-item copy-trigger" data-copy="samrudhasanil.design@gmail.com" title="Click to copy email">
+                <div class="pill-left">
+                  <div class="pill-icon"><i class="ph ph-envelope-simple"></i></div>
+                  <div>
+                    <div class="pill-title">Email</div>
+                    <div class="pill-val">samrudhasanil@gmail.com</div>
+                  </div>
+                </div>
+                <i class="ph ph-copy" style="color: var(--text-dim);"></i>
+              </a>
+
+              <!-- Phone -->
+              <a href="tel:+919605217880" class="contact-pill-item copy-trigger" data-copy="+91 98765 43210" title="Click to copy phone">
+                <div class="pill-left">
+                  <div class="pill-icon"><i class="ph ph-phone-call"></i></div>
+                  <div>
+                    <div class="pill-title">Phone</div>
+                    <div class="pill-val">+91 9605217880</div>
+                  </div>
+                </div>
+                <i class="ph ph-copy" style="color: var(--text-dim);"></i>
+              </a>
+
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/samrudha-sanil-236321354?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="contact-pill-item">
+                <div class="pill-left">
+                  <div class="pill-icon"><i class="ph ph-linkedin-logo"></i></div>
+                  <div>
+                    <div class="pill-title">LinkedIn</div>
+                    <div class="pill-val">linkedin.com/in/samrudhasanil</div>
+                  </div>
+                </div>
+                <i class="ph ph-arrow-up-right" style="color: var(--text-dim);"></i>
+              </a>
+
+              <!-- Instagram -->
+              <a href="https://instagram.com/sketchwith__s" target="_blank" rel="noopener noreferrer" class="contact-pill-item">
+                <div class="pill-left">
+                  <div class="pill-icon"><i class="ph ph-instagram-logo"></i></div>
+                  <div>
+                    <div class="pill-title">Instagram</div>
+                    <div class="pill-val">@sketchwith__s</div>
+                  </div>
+                </div>
+                <i class="ph ph-arrow-up-right" style="color: var(--text-dim);"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Message Form -->
+          
+                
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================================================================
+       FULLSCREEN LIGHTBOX MODAL
+       =================================================================== -->
+  <div id="lightboxModal" class="lightbox-modal" role="dialog" aria-modal="true" aria-label="Project artwork preview modal">
+    <div class="lightbox-content-box">
+      <button id="lightboxCloseBtn" class="lightbox-close-btn" aria-label="Close project preview">
+        <i class="ph ph-x"></i>
+      </button>
+
+      <div class="lightbox-img-side">
+        <img id="lightboxImg" src="" alt="Artwork detail display">
+      </div>
+
+      <div class="lightbox-info-side">
+        <span id="lightboxCategory" class="lightbox-badge">Category</span>
+        <h3 id="lightboxTitle" class="lightbox-title">Artwork Title</h3>
+        <div id="lightboxMeta" class="lightbox-meta">Meta description</div>
+        <p id="lightboxDesc" class="lightbox-desc">Detailed design overview</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <p class="footer-text">
+        Designed & Built by <strong>Samrudha Sanil</strong> • 2026
+      </p>
+      <p class="footer-sub">
+        4th-Year B.Tech Computer Science & Design • Vimal Jyothi Engineering College (2027)
+      </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
